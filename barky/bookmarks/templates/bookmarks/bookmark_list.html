@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Bookmarks</title>
+</head>
+
+<body>
+    <h1>Bookmarks</h1>
+    <ul>
+        {% for bookmark in object_list %}
+        <li><a href="{{ bookmark.url }}">{{ bookmark.title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
