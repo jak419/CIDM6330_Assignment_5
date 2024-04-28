@@ -1,2 +1,4 @@
-# CIDM6330_Assignment_5
-CIDM6330 Assignment 5 Barky Django Code Refactor
+# CIDM6330_Assignment_7
+CIDM6330 Assignment 7 Barky Django Code Refactor 3 - Django Signals and the Return of the Command.
+
+In this submission, commands are in the repositories.py file. 
