@@ -1,4 +1,5 @@
 from .models import Bookmark
+from django.db import transaction
 
 class BookmarkRepository:
     def get_all_bookmarks(self):
@@ -14,6 +15,7 @@ class BookmarkRepository:
         Bookmark.objects.filter(id=id).update(**kwargs)
 
     def delete_bookmark(self, id):
-        bookmark = self.get_bookmark_by_id(id)
-        if bookmark:
-            bookmark.delete()
+         with transaction.atomic():
+            bookmark = self.get_bookmark_by_id(id)
+            if bookmark:
+                bookmark.delete()
